@@ -58,7 +58,9 @@ Now you can login:
 az login
 ```
 
-Opens a web page with alogin dialog. After successful login you will redirect to a documentation page named `Azure Command-Line Interface (CLI)`. Scroll down and click on SQL database and you will see [Azure CLI samples for Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-cli-samples?toc=%2fcli%2fazure%2ftoc.json&bc=%2fcli%2fazure%2fbreadcrumb%2ftoc.json) 
+Opens a web page with a login dialog. After successful login you will redirect to a documentation page named `Azure Command-Line Interface (CLI)`. Scroll down and click on SQL database and you will see [Azure CLI samples for Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-cli-samples?toc=%2fcli%2fazure%2ftoc.json&bc=%2fcli%2fazure%2fbreadcrumb%2ftoc.json) 
+	
+![](https://raw.githubusercontent.com/AppWerft/Ti.Azure.SQLDB/master/documentation/sqlserver.png)	
 	
 ## Create a Service Principal
 In order to access resources a Service Principal needs to be created in your Tenant. It is really convenient to do it via AZ CLI:
