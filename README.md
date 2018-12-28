@@ -50,6 +50,15 @@ Welcome to the cool new Azure CLI!
 ```
 
 ## Creating azure account and database
+
+
+Now you can login:
+
+```
+az login
+```
+
+Opens a web page with alogin dialog. After successful login you will redirect to a documentation page named `Azure Command-Line Interface (CLI)`. Scroll down and click on SQL database and you will see [Azure CLI samples for Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-cli-samples?toc=%2fcli%2fazure%2ftoc.json&bc=%2fcli%2fazure%2fbreadcrumb%2ftoc.json) 
 	
 ## Create a Service Principal
 In order to access resources a Service Principal needs to be created in your Tenant. It is really convenient to do it via AZ CLI:
@@ -59,13 +68,13 @@ az ad sp create-for-rbac --name [APP_NAME] --password [CLIENT_SECRET]
 ```
 What is happening here is that you’re registering your application in order to be able to be recognized by Azure (more precisely: from the AD tenant that is taking care of your subscription). Exactly like when you register your application to access Twitter or Facebook in order to be able to read and write posts/tweets/user data and so on.
 
-## Request the Access Token
+## Getting the Access Token
 
 As said before authentication used the OAuth2 protocol, and this means that we have to obtain a token in order to authenticate all subsequent request. We need to use the client_credential flow:
 
 ```
 const Azure = require('ti.azuresqldb');
-Azure.createAccessToken({
+Azure.getAccessToken({
 	appid : APP_ID,
 	password : PASSWORD,
 	tenantid : TENANT_ID
@@ -102,7 +111,7 @@ hkSFwruPWvkE15zzleYir_SsSVveaRlMUq9q7GOEr87aGvOVB3QManIn_jIo1cnDCUJZ3WX7hcMvq0dL
 ## Save document
 
 ```
-const Azure = require('ti.azuresqldb');
+const Azure = require('ti.azure.sqldb');
 Azure.saveDocument({
     first_name : "Fritz",
     family_name : "Müller",
@@ -113,7 +122,7 @@ Azure.saveDocument({
 ## Getting documents
 
 ```
-const Azure = require('ti.azuresqldb');
+const Azure = require('ti.azure.sqldb');
 Azure.getAll({
 },onSuccess,onError);
 ```
