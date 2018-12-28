@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 2
+architectures: armv7 arm64 i386 x86_64
+description: tiazuresqldb
+author: Rainer
+license: Specify your license
+copyright: Copyright (c) 2018 by Your Company
+
+# these should not be edited
+name: tiazuresqldb
+moduleid: ti.azureslqdb
+guid: cc7d3542-f2cd-48e8-b56c-748fececd93a
+platform: iphone
+minsdk: 7.0.1.GA
